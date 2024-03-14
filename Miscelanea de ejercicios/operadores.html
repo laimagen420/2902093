@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operadores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<form id="formulario">
+    
+</head> 
+<body>
+    <h1>1:calcular el area de un triangulo</h1>
+        <label for="base">Base del triángulo:</label>
+        <input type="number" id="base" name="base" required>
+        <br>
+        <label for="altura">Altura del triángulo:</label>
+        <input type="number" id="altura" name="altura" required>
+        <br>
+        <button type="button" onclick="calcularAreaTriangulo()">Calcular área</button>
+      </form>
+      <p id="resultado"></p>
+      <script>
+        function calcularAreaTriangulo() {
+          var base = parseFloat(document.getElementById("base").value);
+          var altura = parseFloat(document.getElementById("altura").value);
+          var area = (base * altura) / 2;
+          document.getElementById("resultado").textContent = "El área del triángulo es: " + area;
+        }
+      </script>
+      
+      <h1>2:Ingresar dos números por teclado y sumarlos</h1>
+      <label for="num1">numero 1:</label>
+        <input type="number" id="num1" name="num1" required>
+        <br>
+        <label for="num2">numero 2</label>
+        <input type="number" id="num2" name="num2" required>
+        <br>
+        <button type="button" onclick="sumarDosNumeros()">Calcular suma</button>
+        <p id="suma"></p>
+
+
+
+      
+      <script>
+        function sumarDosNumeros() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var suma = (num1 + num2);
+            document.getElementById("suma").textContent= "La suma de los dos numeros es: " +suma;
+        }
+    </script>
+
+    <h1>3:Ingresar un número y visualizar el número elevado al cuadrado.
+    </h1>
+    <label for="numero">numero 1:</label>
+      <input type="number" id="numero" name="numero" required>
+      <br>
+      <button type="button" onclick="raizCuadrada()">Calcular raiz cuadrada</button>
+      <p id="raiz"></p>
+
+    <script>
+      function raizCuadrada() {
+          var numero = parseFloat(document.getElementById("numero").value);
+          var raiz = (numero * numero);
+          document.getElementById("raiz").textContent= "La raiz cuadrada es: " +raiz;
+      }
+    </script>
+
+
+    <h1>4:conversion de euros a dolares</h1>
+    
+    <label for="numero">cantidad</label>
+      <input type="number" id="dato1" name="dato1" required>
+      <br>
+      <button type="button" onclick="ConversionEuros()">Calcular la conversion</button>
+      <p id="conversion"></p>
+
+    <script>
+      function ConversionEuros() {
+          var dato1 = parseFloat(document.getElementById("dato1").value);
+          var conversion = (dato1 + 0.9);
+          document.getElementById("conversion").textContent= "La conversion es:" +conversion;
+      }
+    </script>
+
+<h1>5:calcular area y perimetro de un cuadrado</h1>
+    <label for="numero">valor de un lado:</label>
+    <input type="number" id="lado" name="lado" required>
+    <br>
+    <button type="button" onclick="areaYperimetro()">Calcular area y perimetro</button>
+    <p id="perimetro"></p>
+
+    <script>
+    function AreaYperimetro() {
+        var lado = parseFloat(document.getElementById("lado"));
+        var area = lado * lado;
+        var perimetro = lado * 4;
+        document.getElementById("El área del cuadrado es: " + area + "\nEl perímetro del cuadrado es: " + perimetro);
+
+    
+    }
+</script>
+<h1>6: Determina el área y el volumen de un cilindro</h1>
+<label for="radio">Valor de radio:</label>
+<input type="number" id="radio" name="radio" required>
+<br>
+<label for="altura">Valor de altura:</label>
+<input type="number" id="altura" name="altura" required>
+<br>
+<button type="button" onclick="calcularAreaYVolumenCilindro()">Calcular área y volumen</button>
+<p id="areaTotal"></p>
+<p id="volumen"></p>
+
+<script>
+  function calcularAreaYVolumenCilindro() {
+    var radio = document.getElementById("radio").value;
+    var altura = document.getElementById("altura").value;  
+    var areaBase = Math.PI * (radio * radio);
+    var areaLateral = 2 * Math.PI * radio * altura;
+    var areaTotal = 2 * areaBase + areaLateral;
+    var volumen = areaBase * altura;
+  
+    document.getElementById("areaTotal").innerHTML = "El área total es: " + areaTotal;
+    document.getElementById("volumen").innerHTML = "El volumen es: " + volumen;
+  }
+</script>
+<h1>7: Determina la longitud y el área de una circunferencia</h1>
+<label for="radio">Valor de radio:</label>
+<input type="number" id="radio" name="radio" required step="1" min="0">
+<br>
+<button type="button" onclick="calcularLongitudYAreaCircunferencia()">Calcular longitud y área</button>
+<p id="longitud"></p>
+<p id="areaCirculoInscrito"></p>
+
+<script>
+  function calcularLongitudYAreaCircunferencia() {
+    var radio = parseFloat(document.getElementById("radio").value);
+    var longitud = 2 * Math.PI * radio;
+    var areaCirculoInscrito = Math.PI * (radio * radio);
+
+    document.getElementById("longitud").innerHTML = "La longitud de la circunferencia es: " + longitud;
+    document.getElementById("areaCirculoInscrito").innerHTML = "El área del círculo inscrito es: " + areaCirculoInscrito;
+    return calcularLongitudYAreaCircunferencia()
+  }
+</script>
+</body>
+
+</html>
